@@ -1,0 +1,15 @@
+
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Registry</h2>
+      <p>
+        We're registered at
+        {% for reg in site.data.registries %}
+          {% if forloop.last == true%} and on{% endif %}
+          <a href="{{ reg.url }}" target="_blank">{{ reg.name }}</a>{% unless forloop.last == true %},{% endunless %}
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+</section>

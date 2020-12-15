@@ -1,0 +1,83 @@
+<style>
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photos img {
+  width: 300px;
+  height: auto;
+  padding: 15px;
+  border: solid 1px rgb(181 181 181);
+  margin: 8px;
+  background-color: #e0e0e0;
+  cursor: zoom-in;
+}
+</style>
+
+<div class="photos" id="infinite-list">
+</div>
+
+<script>
+{% assign image_files = site.static_files | where: "image", true %}
+const imageList = [
+  {% for img in image_files %}
+  '{{ site.baseurl }}{{ img.path }}',
+  {% endfor %}
+];
+
+const listElm = document.querySelector('#infinite-list');
+
+const page = 5;
+const bottomOffset = 200;
+let j = 0;
+const loadMore = function() {
+  for (let i = 0; i < page && j < imageList.length; i++) {
+    const item = document.createElement('img');
+    item.src = imageList[j++];
+    item.setAttribute('data-enlargeable', true);
+    item.style
+    listElm.appendChild(item);
+    item.classList.add('img-enlargeable');
+
+    item.addEventListener('click', function(){
+      const src = $(this).attr('src');
+      let modal;
+      function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
+      modal = $('<div>').css({
+          background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+          backgroundSize: 'contain',
+          width:'100%', height:'100%',
+          position:'fixed',
+          zIndex:'10000',
+          top:'0', left:'0',
+          cursor: 'zoom-out'
+      }).click(function(){
+          removeModal();
+      }).appendTo('body');
+      //handling ESC
+      $('body').on('keyup.modal-close', function(e){
+        if(e.key==='Escape'){ removeModal(); } 
+      });
+    });
+  }
+}
+
+// Detect when scrolled to bottom.
+document.addEventListener('scroll', function() {
+  if (document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight - bottomOffset) {
+    loadMore();
+  }
+});
+
+// Initially load some items.
+loadMore();
+
+// In case the screen doesn't have scroll bars, add more images until it does.
+if (document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight - bottomOffset) {
+  loadMore();
+}
+
+</script>

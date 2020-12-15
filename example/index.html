@@ -1,0 +1,9 @@
+---
+layout: default
+invisible_nav: true
+include: our_story.html
+---
+
+{% if page.include %}
+  {% include {{ page.include }} %}
+{% endif %}

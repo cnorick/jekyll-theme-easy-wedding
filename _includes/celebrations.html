@@ -1,0 +1,46 @@
+{% for event in site.data.events %}
+  <section class="container content-section {% cycle 'text-left', 'text-right' %}">
+    <div class="row">
+      <div class="col-lg-7 col-lg-offset-{% cycle 2, 3 %} col-sm-offset-2 col-sm-8">
+        <h2>
+          {{ event.name }}
+          <br>
+          <small>
+            {% if event.date %}
+              {{ event.date | date: '%A, %B %e, %Y' }} | {{ event.date | date: '%l:%M %p' }}
+            {% else %}
+              {{ event.date_alt }}
+            {% endif %}
+          </small>
+        </h2>
+
+        <div class="row">
+          <address class="col-xs-8 text-left">
+            <strong>{{ event.location_name }}</strong><br>
+            <a href="{{ event.google_maps_url }}">
+              {{ event.location.address }}<br>
+              {{ event.location.city }}, {{ event.location.state }} {{ event.location.zip }}<br>
+            </a>
+          </address>
+
+          <dl class="col-xs-4 text-right">
+            <dt>Attire</dt>
+            <dd>{{ event.attire | capitalize }}</dd>
+          </dl>
+
+        </div>
+
+        <p>{{ event.description }}</p>
+        
+        {% if event.transportation %}
+          <p><em>{{ event.transportation }}</em></p>
+        {% endif %}
+
+        {% if event.shuttle %}
+          <p><em>{{ event.shuttle }}</em></p>
+        {% endif %}
+
+      </div>
+    </div>
+  </section>
+{% endfor %}

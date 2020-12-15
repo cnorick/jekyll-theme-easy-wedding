@@ -1,0 +1,62 @@
+---
+name: RSVP Yes
+modal_id: rsvp-yes-modal
+---
+
+{% capture content %}
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+        aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">{{ site.data.settings.rsvp.yes_modal_title }}</h4>
+  </div>
+  <div class="modal-body">
+    <div class="section-padding">
+      <p>{{ site.data.settings.rsvp.yes_modal_body }}</p>
+      <p>{{ site.data.settings.rsvp.sms_followup_text }}</p>
+      <div id="add-to-cal"></div>
+    </div>
+  </div>
+{% endcapture %}
+
+{% include js.html src='assets/js/ouical.min.js' %}
+
+{% assign main_event = site.data.events | where: "main_event", true | first %}
+{%- capture eventTitle -%}
+  {{ site.data.couple.spouse1.short_name }}'s and {{ site.data.couple.spouse2.short_name }}'s Wedding
+{%- endcapture -%}
+<script>
+// const ouical = require('/assets/js/ouical.js');
+$(document).ready(function () {
+  const myCalendar = createCalendar({
+    options: {
+      class: '',
+      // You can pass an ID. If you don't, one will be generated for you
+      id: ''
+    },
+    data: {
+      // Event title
+      title: "{{ eventTitle | escape }}",
+
+      // Event start date
+      start: new Date(Number("{{ main_event.date | date: '%s' }}") * 1000),
+
+      // Event duration (IN MINUTES)
+      // duration: 4 * 60,
+
+      // You can also choose to set an end time
+      // If an end time is set, this will take precedence over duration
+      end: new Date(Number("{{ main_event.endDate | date: '%s' }}") * 1000),
+
+      // Event Address
+      address: '{{ main_event.location.address }} {{ main_event.location.city }}, {{ main_event.location.state }} {{ main_event.location.zip }}',
+
+      // Event Description
+      description: "We can't wait to see you on the day of the wedding. For any questions or issues, contact Nathan Orick.\n\nWebsite: {{site.url}}"
+    }
+  });
+
+  $('#add-to-cal').html(myCalendar);
+});
+</script>
+    
+{% include modals/modal.html content=content %}

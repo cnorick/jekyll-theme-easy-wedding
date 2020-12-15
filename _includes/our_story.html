@@ -1,0 +1,40 @@
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-2">
+                    <h1 class="brand-heading">{{ site.data.couple.spouse1.short_name }} & {{ site.data.couple.spouse2.short_name }}</h1>
+                    <p class="intro-text">
+                        {% assign main_event = site.data.events | where: "main_event", true | first %}
+                        {{ main_event.date | date: '%B %d, %Y' }}
+                        <br>
+                        {{ main_event.location.city }}, {{ main_event.location.long_state }}
+                      <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% for story in site.stories %}
+    {% if story.image %}
+        {% capture style %}
+            {% if story.image_position %} background-position: {{ story.image_position }};{% endif %}
+            background-image: url({{ story.image }})
+        {% endcapture %}
+
+        <section class="billboard"
+                 style="{{ style }}"
+        ></section>
+    {% endif %}
+
+<section id="ourstory" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            {{ story.content | markdownify }}
+        </div>
+    </div>
+</section>
+{% endfor %}

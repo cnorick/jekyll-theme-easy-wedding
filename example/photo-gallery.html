@@ -1,0 +1,11 @@
+---
+layout: info
+title: Photos
+billboard_image: assets/img/wall.jpg
+image_position: center center
+include: photo-gallery.html
+---
+
+{% if page.include %}
+  {% include {{ page.include }} %}
+{% endif %}

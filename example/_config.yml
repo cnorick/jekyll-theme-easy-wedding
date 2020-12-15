@@ -1,0 +1,27 @@
+# Site settings
+theme: jekyll-theme-easy-wedding
+title: Rebecca & Ryan
+email: nathan@nathanorick.com
+url: http://wedding.nathanorick.com
+description: "We're getting married and can't wait to celebrate with you!"
+baseurl: ""
+
+collections:
+  stories:
+    sort_by: order
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "photos/"
+    values:
+      image: true
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - _compress_images_cache.yml

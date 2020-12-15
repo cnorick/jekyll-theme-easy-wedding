@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% capture style %}
+    {% if page.image_position %} background-position: {{ page.image_position }};{% endif %}
+    background-image: url({{site.baseurl}}/{{ page.billboard_image }})
+{% endcapture %}
+
+<header class="billboard billboard-header"
+        style="{{style}}">
+  <h1 class="billboard-text">
+    {{ page.title }}
+  </h1>
+</header>
+
+{{ content }}

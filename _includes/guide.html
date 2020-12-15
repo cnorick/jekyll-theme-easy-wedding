@@ -1,0 +1,39 @@
+{% if site.guide[site.context] %}
+  <section class="container content-section text-center">
+    <p>
+      In case you need some inspiration when deciding what to do in Chicago,
+      here are a few of our favorites!
+    </p>
+
+    {% for section in site.guide[site.context] %}
+      <h3>{{ section[0] }}</h3>
+      <div class="row">
+        {% for one in section[1] %}
+            <div class="col-lg-6">
+              <p>
+                <strong>{{ one.title }}</strong>
+                <br>
+                {{ one.description}}
+              </p>
+            </div>
+
+            <div class="clearfix {% cycle 'hidden', 'visible-lg'%}"></div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+
+  <section class="container content-section text-center">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Map of Chicago</h3>
+        <p>
+          To help you get oriented, most of the above places are marked below.
+        </p>
+        <div>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z0XYnxwl5wDk.kCMdy34paGR4" class="map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

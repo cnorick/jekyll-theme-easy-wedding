@@ -1,0 +1,22 @@
+<div class="thumbnail thumbnail-hotel">
+  <!-- {% include google_map.html link=hotel.google_maps_url coordinates=hotel.coordinates size="555x305" %} -->
+  <div class="caption">
+    <h3>
+      {{ hotel.name }}
+      <br>
+      <small>
+        {{ hotel.rate }}
+      </small>
+    </h3>
+    <p>
+      {{ hotel.address1 }}
+      <br>
+      {{ hotel.address2 }}
+      <br>
+      <span>{{ hotel.phone }}</span>
+    </p>
+    <p>{{ hotel.description }}</p>
+    <a class="btn btn-primary" href="{{ hotel.reserve_url }}" target="_blank">Reserve</a>
+    <a class="btn btn-default visible-xs-inline-block" href="tel://{{ hotel.phone }}">Call</a>
+  </div>
+</div>

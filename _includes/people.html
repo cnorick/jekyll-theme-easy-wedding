@@ -1,0 +1,66 @@
+<section class="container content-section text-center">
+  <h2>{{ site.data.settings.people.families_header }}</h2>
+  <p> {{ site.data.settings.people.families_text }} </p>
+  <div class="portraits-container">
+    {% for family in site.data.people.families %}
+      <div class="portrait">
+        <div class="thumbnail thumbnail-portrait">
+          <img src="{{site.baseurl}}/assets/img/people/{{ family.pic }}" class="img-thumbnail" alt="{{ family.name }}" title="{{ family.name }}">
+          <div class="caption">
+            <h4>{{ family.name }}</h4>
+            <p>{{ family.people }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container content-section text-center">
+  <h2>{{ site.data.settings.people.kids_header }}</h2>
+  <p>
+    {{ site.data.settings.people.kids_text }}
+  </p>
+  <div class="portraits-container">
+    {% for kid in site.data.people.kids %}
+      <div class="portrait">
+        <div class="thumbnail thumbnail-portrait">
+          <img src="{{site.baseurl}}/assets/img/people/{{ kid.pic }}" class="img-thumbnail" alt="{{ kid.name }}" title="{{ kid.name }}">
+          <div class="caption">
+            <p>
+              {{ kid.name }}
+              <br>
+              <small>{{ kid.title }}</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container content-section text-center">
+  <h2>{{ site.data.settings.people.wedding_party_header }}</h2>
+  {% for her in site.data.people.her_side %}
+    {% assign his = site.data.people.his_side[forloop.index0] %}
+    <div class="row">
+      <div class="col-sm-3 col-md-offset-1 col-md-3 col-xs-6" style="margin-bottom: 60px">
+        <img class="img-thumbnail img-responsive" src="{{site.baseurl}}/assets/img/people/{{ her.pic }}" alt="{{ her.name }}" title="{{ her.name }}">
+      </div>
+      <p class="col-sm-3 col-md-2 col-xs-6 text-left">
+        {{ her.name }}<br><small>{{ her.role }}</small>
+      </p>
+
+      <div class="clearfix visible-xs-block"></div>
+
+      {% if his %}
+        <p class="col-sm-3 col-md-2 col-xs-6 text-right">
+          {{ his.name }}<br><small>{{ his.role }}</small>
+        </p>
+        <div class="col-sm-3 col-md-3 col-xs-6" style="margin-bottom: 60px">
+          <img class="img-thumbnail img-responsive" src="{{site.baseurl}}/assets/img/people/{{ his.pic }}" alt="{{ his.name }}" title="{{ his.name }}">
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>

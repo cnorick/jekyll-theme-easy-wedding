@@ -1,0 +1,19 @@
+---
+name: RSVP No
+modal_id: rsvp-no-modal
+---
+
+{% capture content %}
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+        aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">{{ site.data.settings.rsvp.no_modal_title }}</h4>
+  </div>
+  <div class="modal-body">
+    <div class="section-padding">
+      <p>{{ site.data.settings.rsvp.no_modal_body }}</p>
+      <p>{{ site.data.settings.rsvp.sms_followup_text }}</p>
+    </div>
+  </div>
+{% endcapture %}
+{% include modals/modal.html content=content %}

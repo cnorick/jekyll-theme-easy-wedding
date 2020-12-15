@@ -1,0 +1,12 @@
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-left">
+      <dl>
+        {% for one in site.data.faq %}
+          <dt><h3>{{ one.question }}</h3></dt>
+          <dd><p class="faq-answer">{{ one.answer }}</p></dd>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>

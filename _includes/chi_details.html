@@ -1,0 +1,210 @@
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+      <h2>Getting Here</h2>
+      <p>
+        For those flying in, there are two airports that are
+        equidistant from downtown Chicago.
+        <br>
+        Both offer public transportation and private taxis into the city.
+      </p>
+    </div>
+    <div class="col-lg-offset-2 col-lg-4 col-sm-6 text-left">
+      <h3>
+        O'Hare International
+        <br>
+        <small>
+          ORD
+        </small>
+      </h3>
+
+      <ul>
+        <li>Bigger and busier</li>
+        <li>All airlines except Southwest</li>
+        <li>
+          For public transportation into Chicago take the
+          CTA Blue Line to the loop
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-lg-4 col-sm-6 text-left">
+      <h3>
+        Midway International
+        <br>
+        <small>
+          MDW
+        </small>
+      </h3>
+      <ul>
+        <li>Smaller and more quiet</li>
+        <li>Major hub for Southwest</li>
+        <li>
+          For public transportation into Chicago take
+          the CTA Orange Line to the loop
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+      <h2>Where to Stay</h2>
+      <p>
+        We have a couple room blocks for anyone traveling from out of town.
+      </p>
+      <p>
+        <strong>
+          Please note - rooms are only available through our room block for the following nights:
+          <br>
+          Thursday, May 26 (Hilton only)
+          <br>
+          Friday, May 27
+          <br>
+          Saturday, May 28
+          <br>
+          Sunday, May 29
+        </strong>
+      </p>
+      <p>
+        The reservation links below will only allow you to book rooms for the above nights.
+        If you'd like to stay for any nights other than the ones listed, please call the hotel directly and
+        reference the <em>Vashi-Baclig wedding</em>.
+      </p>
+      <div class="row">
+        {% for hotel in site.hotels.chi %}
+          <div class="col-sm-6 ">
+            {% include hotel_thumbnail.html hotel=hotel %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+      <h2 id="getting-around">Getting Around</h2>
+      <p>
+        We'll be coordinating transportation for events not located
+        at the Hilton, but for when you want to get out and explore the city yourself,
+        there are plenty of ways to get around.
+      </p>
+
+      <div class="row">
+          <div class="col-lg-6 text-left">
+
+          <h3>Car</h3>
+
+          <p>
+            First and foremost, a car is not necessary to get around to all
+            the wedding fesitivites, and in fact is probably more difficult to
+            manage due to limited parking and tight streets.
+          </p>
+          <p>
+            That being said, the streets of Chicago are easy to navigate as the roads
+            line up on a grid and both hotels offer parking (valet
+            and self-park, for a fee.)
+          </p>
+        </div>
+
+        <div class="col-lg-6 text-left">
+
+          <h3>Taxi</h3>
+
+          <p>
+            Hailing a cab typically isn't too hard in the city. If you don't have cash,
+            all cabs are required to <strong>accept credit cards</strong>. Legally,
+            cabs are not allowed to accept more passengers than there are
+            seat belts in the car. That being said, it never hurts to ask :)
+          </p>
+          <p>
+            For more info check out some
+            <a href="https://www.cityofchicago.org/content/dam/city/depts/bacp/publicvehicleinfo/passengerinfo/knowbeforeyouride07242014.pdf">
+              city of Chicago taxi tips.
+            </a>
+          </p>
+        </div>
+
+
+
+        <div class="col-lg-6 text-left">
+          <h3>CTA</h3>
+          <p>
+           The city of Chicago Transit Authority incorporates an elevated 'L' train and a system of buses. For most tourist destinations, the 'L' should get you wehre you want to go.
+          </p>
+          <p>
+            The closest 'L' station to the Hilton is the Harrison Red Line station at the corner of Harrison St. and State St.
+          </p>
+          <p>
+            Hotel Burnham is equidistant from the Washington Blue Line station (at the corner of Washington St. and Dearborn St.) and the Randolph/Wabash station, which serves multiple 'L' lines.
+          </p>
+        </div>
+
+        <div class="col-lg-6 text-left">
+          <h3>Uber & Lyft</h3>
+
+          <p>
+            Ride-share much? Uber tends to be our app-of-choice, but Lyft also has
+            good coverage as well. If you've never used either, you can use the
+            following promo codes to get $20 off you first ride with each service.
+          </p>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="row">
+                <p class="col-xs-offset-1 col-xs-10">
+                  <img class="img-responsive" src="{{site.baseurl}}assets/img/uber-black.png">
+                </p>
+                <div class="clearfix"></div>
+                <p class="col-xs-12 text-center">
+                  <a href="https://itunes.apple.com/us/app/uber/id368677368" class="btn btn-default btn-sm">
+                    iPhone
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.ubercab" class="btn btn-default btn-sm">
+                    Android
+                  </a>
+                </p>
+                <p class="col-xs-12 text-center">
+                  Code: <code>uberchrisandnikita</code>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="row">
+                <p class="col-xs-offset-3 col-xs-6">
+                  <img class="img-responsive" src="{{site.baseurl}}assets/img/lyft.svg" width="100%">
+                </p>
+                <div class="clearfix"></div>
+                <p class="col-xs-12 text-center">
+                  <a href="https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082" class="btn btn-default btn-sm">
+                    iPhone
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=me.lyft.android"  class="btn btn-default btn-sm">
+                    Android
+                  </a>
+                </p>
+                <p class="col-xs-12 text-center">
+                  Code: <code>CHRISANDNIKITA</code>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        For those not familiar with Chicago, here's a map to get you oriented.
+      </p>
+
+      <div>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z0XYnxwl5wDk.kCMdy34paGR4" class="map"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>

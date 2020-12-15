@@ -1,0 +1,17 @@
+<section class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+      <h2>Where to Stay</h2>
+      <p>
+        We have a block of rooms nearby for anyone that wants to spend the night in Long Beach.
+      </p>
+      <div class="row">
+        {% for hotel in site.hotels.lbc %}
+          <div class="col-lg-offset-3 col-sm-6 ">
+            {% include hotel_thumbnail.html hotel=hotel %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

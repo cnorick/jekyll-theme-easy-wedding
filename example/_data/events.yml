@@ -1,0 +1,47 @@
+- name: Wedding Shower
+  date: Thursday, May 26, 2016
+  time: 7pm
+  attire: Casual
+  description: We have decided to not have a gender-specific wedding shower, but instead have an inclusive pre-wedding party for all guests and family members to celebrate our upcoming nuptials. Join us for our brunch shower to help us get our wedding season started! Parking will be plentiful at the restaurant. If you are interested in bringing a gift, our registries are linked on the site!
+  transportation:
+  location:
+    address: 640 Pansy Hill Rd
+    city: Harriman
+    state: TN
+    long_state: Tennessee
+    zip: 37748
+    coordinates: 41.911652,-87.641253
+    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
+    venue_name:
+
+- name: Wedding Ceremony
+  main_event: true
+  date: 2021-04-03 17:00:00 −04:00
+  endDate: 2021-04-03 21:00:00 -04:00
+  attire: snappy casual
+  description: Our wedding ceremony will be the perfect blend of our separate Catholic and Baptist traditions. Please arrive at least 10 minutes prior to the start of the ceremony in order to find your seat. There will be a parking attendant on site to direct you, and the venue will also provide transportation to the ceremony site if needed. We ask that you please ensure that your cell phones are off and out of sight for the duration of the ceremony.
+  transportation:
+  shuttle:
+  location:
+    address: 640 Pansy Hill Rd
+    city: Harriman
+    state: TN
+    long_state: Tennessee
+    zip: 37748
+    coordinates: 41.911652,-87.641253
+    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
+    venue_name:
+
+- name: Reception
+  date_alt: Immediately following the ceremony
+  attire: snappy casual
+  description: The wedding reception is at the same venue as the ceremony and will commence directly after the ceremony ends. Venue staff will direct you to the reception space. Dinner will be provided and make sure to bring your dancing shoes!
+  location:
+    address: 640 Pansy Hill Rd
+    city: Harriman
+    state: TN
+    long_state: Tennessee
+    zip: 37748
+    coordinates: 41.911652,-87.641253
+    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
+    venue_name:
