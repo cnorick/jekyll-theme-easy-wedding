@@ -29,12 +29,14 @@
     <![endif]-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0BJ20T7XR"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    {% if jekyll.environment == "production" %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{site.data.settings.google_analytics_id}}"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-X0BJ20T7XR');
-    </script> -->
+        gtag('config', '{{site.data.settings.google_analytics_id}}');
+        </script>
+    {% endif %}
 </head>
