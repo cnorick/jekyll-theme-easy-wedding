@@ -17,7 +17,7 @@
         <div class="row">
           <address class="col-xs-8 text-left">
             <strong>{{ event.location_name }}</strong><br>
-            <a href="{{ event.google_maps_url }}">
+            <a href="{{ event.location.google_maps_url }}">
               {{ event.location.address }}<br>
               {{ event.location.city }}, {{ event.location.state }} {{ event.location.zip }}<br>
             </a>
