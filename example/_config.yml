@@ -4,7 +4,7 @@ title: Rebecca & Ryan
 email: nathan@nathanorick.com
 url: http://wedding.nathanorick.com
 description: "We're getting married and can't wait to celebrate with you!"
-baseurl: "/weddings/sample"
+baseurl: ""
 
 collections:
   stories:
