@@ -10,13 +10,19 @@
         {% include js.html src="assets/js/main.js" %}
 
         {% include modals.html %}
-        {% include nav.html %}
+
+        {% if page.show_nav != false %}
+            {% include nav.html %}
+        {% endif %}
 
         <div class="content-wrapper">
             {{ content }}
         </div>
-        <div class="footer-wrapper">
-            {% include footer.html %}
-        </div>
+
+        {% if page.show_footer != false %}
+            <div class="footer-wrapper">
+                {% include footer.html %}
+            </div>
+        {% endif %}
     </body>
 </html>
