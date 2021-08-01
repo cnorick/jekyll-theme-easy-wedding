@@ -1,9 +1,4 @@
----
-name: RSVP No
-modal_id: rsvp-no-modal
----
-
-{% capture content %}
+{% capture modal_content %}
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
         aria-hidden="true">&times;</span></button>
@@ -16,4 +11,4 @@ modal_id: rsvp-no-modal
     </div>
   </div>
 {% endcapture %}
-{% include modals/modal.html content=content %}
+{% include modals/modal.html content=modal_content name='RSVP No' modal_id='rsvp-no-modal' %}

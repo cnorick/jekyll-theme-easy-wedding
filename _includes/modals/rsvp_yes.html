@@ -1,9 +1,4 @@
----
-name: RSVP Yes
-modal_id: rsvp-yes-modal
----
-
-{% capture content %}
+{% capture modal_content %}
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
         aria-hidden="true">&times;</span></button>
@@ -59,4 +54,4 @@ $(document).ready(function () {
 });
 </script>
     
-{% include modals/modal.html content=content %}
+{% include modals/modal.html content=modal_content name='RSVP Yes' modal_id='rsvp-yes-modal' %}

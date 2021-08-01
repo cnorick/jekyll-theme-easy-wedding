@@ -1,14 +1,12 @@
----
-name: RSVP
-modal_id: rsvp-modal
----
-
-{% capture content %}
+{% capture name %}
+RSVP
+{% endcapture %}
+{% capture modal_content %}
 <form id="rsvp-form" class="rsvp-form" action="" method="POST">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
         aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title" id="myModalLabel">{{ page.name }}</h4>
+    <h4 class="modal-title" id="myModalLabel">{{ name }}</h4>
   </div>
 
   <div class="modal-body form-horizontal text-center">
@@ -96,4 +94,4 @@ modal_id: rsvp-modal
 {% endcapture %}
 
 {% include js.html src="assets/js/rsvp.js" %}
-{% include modals/modal.html content=content %}
+{% include modals/modal.html content=modal_content name=name modal_id='rsvp-modal' %}

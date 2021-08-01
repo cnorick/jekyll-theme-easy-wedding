@@ -1,8 +1,8 @@
-{% capture content %}
+{% capture modal_content %}
 <form>
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title" id="myModalLabel">{{ page.name }}</h4>
+    <h4 class="modal-title" id="myModalLabel">{{ include.name }}</h4>
   </div>
   <div class="modal-body form-horizontal text-center">
     {{ content }}
@@ -26,4 +26,4 @@
 </form>
 {% endcapture %}
 
-{% include modals/modal.html content=content %}
+{% include modals/modal.html content=modal_content modal_id=include.modal_id%}
