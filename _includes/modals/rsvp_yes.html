@@ -46,7 +46,7 @@ $(document).ready(function () {
       address: '{{ main_event.location.address }} {{ main_event.location.city }}, {{ main_event.location.state }} {{ main_event.location.zip }}',
 
       // Event Description
-      description: "We can't wait to see you on the day of the wedding. For any questions or issues, contact Nathan Orick.\n\nWebsite: {{site.url}}"
+      description: "{{ main_event.calendar_description}} \n\nWebsite: {{site.url}}"
     }
   });
 
