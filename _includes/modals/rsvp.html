@@ -4,19 +4,18 @@ RSVP
 {% capture modal_content %}
 <form id="rsvp-form" class="rsvp-form" action="" method="POST">
   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-        aria-hidden="true">&times;</span></button>
     <h4 class="modal-title" id="myModalLabel">{{ name }}</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
 
   <div class="modal-body form-horizontal text-center">
     <div class="input-group">
-      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+      <span class="input-group-text"><i class="fa fa-user"></i></span>
       <input name="name1" class="guest-input form-control" placeholder="Your Name" required id="primary-name">
     </div>
 
     <div class="input-group">
-      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+      <span class="input-group-text"><i class="fa fa-user"></i></span>
       <input name="name2" class="guest-input form-control" placeholder="Your Guest" id="primary-guest" autocomplete="new-password">
     </div>
 
@@ -28,17 +27,17 @@ RSVP
 
     <div class="collapse" id="guest-names-collapse">
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
         <input name="name3" class="guest-input form-control" placeholder="Your 2nd Guest" autocomplete="new-password">
       </div>
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
         <input name="name4" class="guest-input form-control" placeholder="Your 3rd Guest" autocomplete="new-password">
       </div>
     </div>
 
     <div class="input-group">
-      <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+      <span class="input-group-text"><i class="fa fa-phone"></i></span>
       <input id="phone-input" type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required>
     </div>
     <div class="collapse help-text" id="phone-help">
@@ -47,34 +46,34 @@ RSVP
 
     {% if site.data.settings.rsvp.use_code %}
       <div class="input-group invite-code-group">
-        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+        <span class="input-group-text"><i class="fa fa-key"></i></span>
         <input type="text" name="invite_code" id="invite_code" class="form-control" placeholder="Invite Code" required autocomplete="new-password">
-        <span class="input-group-addon"><i class="fa fa-info-circle rsvp-help-toggle" id="rsvp-help-toggle"></i></span>
+        <span class="input-group-text"><i class="fa fa-info-circle rsvp-help-toggle" id="rsvp-help-toggle"></i></span>
       </div>
       <div class="collapse rsvp-help-collapse help-text" id="rsvp-code-help-text">
         <div>{{ site.data.settings.rsvp.code_location }}</div>
       </div>
     {% endif %}
 
-    <div class="input-group">
-      <label class="radio-inline">
-        <input type="radio" name="rsvpRadio" id="rsvp-yes" value="yes" required> {{ site.data.settings.rsvp.yes_text }}
-      </label>
-      <label class="radio-inline">
-        <input type="radio" name="rsvpRadio" id="rsvp-no" value="no" required> {{ site.data.settings.rsvp.no_text }}
-      </label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rsvpRadio" id="rsvp-yes" value="yes" required>
+      <label class="form-check-label" for="rsvp-yes">{{ site.data.settings.rsvp.yes_text }}</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rsvpRadio" id="rsvp-no" value="no" required>
+      <label class="form-check-label" for="rsvp-no">{{ site.data.settings.rsvp.no_text }}</label>
     </div>
 
     {% if site.data.settings.rsvp.song_text %}
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-music"></i></span>
+        <span class="input-group-text"><i class="fa fa-music"></i></span>
         <input type="text" name="song" class="form-control" placeholder="{{site.data.settings.rsvp.song_text}}" autocomplete="new-password">
       </div>
     {% endif %}
 
     {% if site.data.settings.rsvp.leave_a_message_text %}
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
         <textarea class="form-control" name="message" rows="3" placeholder="{{site.data.settings.rsvp.leave_a_message_text}}" autocomplete="new-password"></textarea>
       </div>
     {% endif %}
@@ -83,7 +82,7 @@ RSVP
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">
+    <button type="button" class="btn btn-default" data-bs-dismiss="modal">
       {{ site.data.settings.rsvp.cancel_text }}
     </button>
     <button type="submit" class="btn btn-primary" value="Submit" name="submit">

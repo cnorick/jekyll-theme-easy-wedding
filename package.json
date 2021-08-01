@@ -1,0 +1,52 @@
+{
+  "name": "jekyll-theme-easy-wedding",
+  "version": "1.0.0",
+  "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "npm run serve:webpack & sleep 3 && npm run serve:jekyll",
+    "serve:webpack": "webpack --mode development --watch",
+    "serve:jekyll": "bundle exec jekyll serve -s example --watch",
+    "build": "npm run build:webpack && npm run build:jekyll",
+    "build:webpack": "webpack --mode production",
+    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnorick/jekyll-theme-easy-wedding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnorick/jekyll-theme-easy-wedding/issues"
+  },
+  "homepage": "https://github.com/cnorick/jekyll-theme-easy-wedding#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2",
+    "bootstrap-icons": "^1.5.0",
+    "jquery": "^3.6.0",
+    "jquery.easing": "^1.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "cssnano": "^5.0.7",
+    "exports-loader": "^3.0.0",
+    "file-loader": "^6.2.0",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.1.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

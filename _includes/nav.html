@@ -1,20 +1,18 @@
  <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top {% if page.invisible_nav %} navbar-hidden-top {% else %} top-nav-collapse {% endif %}" role="navigation">
+    <nav class="navbar navbar-custom navbar-expand-lg fixed-top {% if page.invisible_nav %} navbar-hidden-top {% else %} top-nav-collapse {% endif %}" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="{{site.baseurl}}/">
-                  {{ site.data.couple.spouse1.short_name | slice: 0 }}
-                  &
-                  {{ site.data.couple.spouse2.short_name | slice: 0 }}
-                </a>
-            </div>
+              <a class="navbar-brand" href="{{site.baseurl}}/">
+                {{ site.data.couple.spouse1.short_name | slice: 0 }}
+                &
+                {{ site.data.couple.spouse2.short_name | slice: 0 }}
+              </a>
+              <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-main-collapse">
+                  <i class="fa fa-bars"></i>
+              </button>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse navbar-right" id="navbar-main-collapse">
+                <ul class="nav navbar-nav ms-auto">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -22,15 +20,15 @@
 
                     {% for item in site.data.navigation %}
                       {% if item.modal_id %}
-                        <li class="modal-link">
-                          <a href="#" data-toggle="modal" data-target="#{{item.modal_id}}">
+                        <li class="modal-link nav-item">
+                          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#{{item.modal_id}}">
                             {{ item.name }}
                             <!-- <i class="fa fa-exclamation-circle modal-link--icon"></i> -->
                           </a>
                         </li>
                       {% else %}
-                        <li class="{% if page.url == {{site.baseurl}}/item.link %}active{% endif %}">
-                            <a href="{{site.baseurl}}{{item.link}}">{{ item.name }}</a>
+                        <li class="{% if page.url == {{site.baseurl}}/item.link %}active{% endif %} nav-item">
+                            <a href="{{site.baseurl}}{{item.link}}" class="nav-link">{{ item.name }}</a>
                         </li>
                       {% endif %}
                     {% endfor %}

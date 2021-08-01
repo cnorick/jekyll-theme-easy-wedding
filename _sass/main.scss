@@ -87,24 +87,24 @@ a:focus {
   outline: 0;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle {
+.navbar-custom .navbar-brand .navbar-toggler {
   padding: 4px 6px;
   font-size: 16px;
   color: #fff;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
+.navbar-custom .navbar-brand .navbar-toggler:focus,
+.navbar-custom .navbar-brand .navbar-toggler:active {
   outline: 0;
 }
 
-.navbar-custom .navbar-toggle {
+.navbar-custom .navbar-toggler {
   margin-top: 5px;
   margin-bottom: 5px;
   color: #fff;
 }
 
-.navbar-custom.top-nav-collapse .navbar-toggle {
+.navbar-custom.top-nav-collapse .navbar-toggler {
   color: inherit;
 }
 
@@ -165,7 +165,8 @@ a:focus {
 }
 
 .navbar-custom.is-expanded a,
-.navbar-custom.top-nav-collapse a {
+.navbar-custom.top-nav-collapse a,
+.navbar-custom.is-expanded .navbar-toggler {
   color: #404040;
 }
 

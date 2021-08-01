@@ -10,9 +10,9 @@ $(window).scroll(function() {
 
     if (hiddenNavBar.length) {
       if (hiddenNavBar.offset().top > 50) {
-          $(".navbar-fixed-top").addClass("top-nav-collapse");
+          $(".navbar").addClass("top-nav-collapse");
       } else {
-          $(".navbar-fixed-top").removeClass("top-nav-collapse");
+          $(".navbar").removeClass("top-nav-collapse");
       }  
     }
 });

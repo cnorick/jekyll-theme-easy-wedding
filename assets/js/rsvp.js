@@ -97,7 +97,7 @@ function objectifyForm(form) {
 
 // alert_markup
 function alert_markup(alert_type, msg) {
-    return '<div class="alert alert-' + alert_type + '" role="alert">' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button></div>';
+    return '<div class="alert alert-' + alert_type + '" role="alert">' + msg + `<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
 }
 
 // MD5 Encoding
