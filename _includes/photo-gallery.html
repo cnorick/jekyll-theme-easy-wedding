@@ -42,25 +42,30 @@ const loadMore = function() {
     listElm.appendChild(item);
     item.classList.add('img-enlargeable');
 
+    const modalCloseListener = (e) => (e.key==='Escape') ? removeModal() : null;
+
     item.addEventListener('click', function(){
-      const src = $(this).attr('src');
+      const src = this.getAttribute('src');
       let modal;
-      function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
-      modal = $('<div>').css({
-          background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
-          backgroundSize: 'contain',
-          width:'100%', height:'100%',
-          position:'fixed',
-          zIndex:'10000',
-          top:'0', left:'0',
-          cursor: 'zoom-out'
-      }).click(function(){
-          removeModal();
-      }).appendTo('body');
+      function removeModal(){
+        modal.remove();
+        document.body.removeEventListener('keyup', modalCloseListener);
+      }
+      modal = document.createElement('div');
+      modal.style.background = 'RGBA(0,0,0,.5) url('+src+') no-repeat center';
+      modal.style.backgroundSize = 'contain';
+      modal.style.width = '100%';
+      modal.style.height = '100%';
+      modal.style.position = 'fixed';
+      modal.style.zIndex = '10000';
+      modal.style.top = '0';
+      modal.style.left = '0';
+      modal.style.cursor = 'zoom-out';
+      modal.onclick = removeModal;
+      document.body.appendChild(modal);
+
       //handling ESC
-      $('body').on('keyup.modal-close', function(e){
-        if(e.key==='Escape'){ removeModal(); } 
-      });
+      document.body.addEventListener('keyup.modal-close', modalCloseListener);
     });
   }
 }
