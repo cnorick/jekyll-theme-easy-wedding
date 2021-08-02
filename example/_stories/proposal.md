@@ -1,6 +1,6 @@
 ---
 order: 3
-image: assets/img/ourstory/story-four.jpg
+image: assets/img/chairs2.jpg
 image_position: bottom
 ---
 ### The proposal

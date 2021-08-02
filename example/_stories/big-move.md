@@ -1,6 +1,6 @@
 ---
 order: 2
-image: assets/img/ourstory/story-three.jpg
+image: assets/img/bell.jpg
 image_position: bottom
 ---
 ### The big move

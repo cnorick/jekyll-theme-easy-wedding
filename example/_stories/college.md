@@ -1,6 +1,6 @@
 ---
 order: 1
-image: assets/img/ourstory/story-two.jpg
+image: assets/img/chairs.jpg
 image_position: bottom
 ---
 ### The college years

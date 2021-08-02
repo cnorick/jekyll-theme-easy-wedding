@@ -1,5 +1,7 @@
 google_analytics_id: G-X0BJ20T7XR
 
+hero_image: assets/img/flowers.jpg
+
 rsvp:
   use_code: true
   code: 1234
