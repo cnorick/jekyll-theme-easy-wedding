@@ -12,22 +12,12 @@
   </div>
 {% endcapture %}
 
-{% include js.html src='assets/js/ouical.min.js' %}
-
 {% assign main_event = site.data.events | where: "main_event", true | first %}
 {%- capture eventTitle -%}
   {{ site.data.couple.spouse1.short_name }}'s and {{ site.data.couple.spouse2.short_name }}'s Wedding
 {%- endcapture -%}
 <script>
-// const ouical = require('/assets/js/ouical.js');
-$(document).ready(function () {
-  const myCalendar = createCalendar({
-    options: {
-      class: '',
-      // You can pass an ID. If you don't, one will be generated for you
-      id: ''
-    },
-    data: {
+    const myCalendar = createAddToCalendarButton({
       // Event title
       title: "{{ eventTitle | escape }}",
 
@@ -46,11 +36,9 @@ $(document).ready(function () {
 
       // Event Description
       description: "{{ main_event.calendar_description}} \n\nWebsite: {{site.url}}"
-    }
-  });
-
-  $('#add-to-cal').html(myCalendar);
-});
-</script>
+    },
+      'add-to-cal',
+    );
+  </script>
     
 {% include modals/modal.html content=modal_content name='RSVP Yes' modal_id='rsvp-yes-modal' %}
