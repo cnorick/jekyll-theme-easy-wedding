@@ -1,6 +1,11 @@
 {% for event in site.data.events %}
   <section class="container content-section">
+    {% if site.data.events.size == 1 %}
+    <div class="row justify-content-center">
+    {% else %}
     <div class="row {% cycle 'justify-content-start', 'justify-content-end' %}">
+    {% endif %}
+
       <div class="col-lg-7 col-sm-8">
         <h2>
           {{ event.name }}
