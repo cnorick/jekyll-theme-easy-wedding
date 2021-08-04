@@ -12,10 +12,6 @@ body {
   flex: 1 0 auto;
 }
 
-.footer-wrapper {
-  flex-shrink: 0;
-}
-
 html {
   width: 100%;
   height: 100%;
@@ -199,14 +195,6 @@ a:focus {
   background-color: #219ab3;
 }
 
-footer {
-  padding: 50px 0;
-}
-
-footer p {
-  margin: 0;
-}
-
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
@@ -379,22 +367,6 @@ dd {
   flex-wrap: wrap;
   .portrait {
     padding: 20px;
-  }
-}
-
-footer.site-footer {
-  padding: 5px 10px;
-  background-color: #e0e2e4;
-  color: #7b7b7b;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: right;
-  p {
-    font-size: 11pt;
-  }
-  a {
-    color: #118da7;
   }
 }
 

@@ -1,0 +1,27 @@
+footer {
+  padding: 50px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-wrapper {
+  flex-shrink: 0;
+}
+
+footer.site-footer {
+  padding: 5px 10px;
+  background-color: #e0e2e4;
+  color: #7b7b7b;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  p {
+    font-size: clamp(.65rem, 2.5vw, .8rem);
+  }
+  a {
+    color: #118da7;
+  }
+}
