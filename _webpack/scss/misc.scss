@@ -27,30 +27,29 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 35px;
   text-transform: uppercase;
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-p {
-  margin: 0 0 25px;
-  font-size: 18px;
-  line-height: 1.5;
-}
+// p {
+//   margin: 0 0 25px;
+//   font-size: 18px;
+//   line-height: 1.5;
+// }
 
-ul {
-  font-size: 18px;
-  margin: 0 0 25px;
-}
+// ul {
+//   font-size: 18px;
+//   margin: 0 0 25px;
+// }
 
-@media (min-width: 767px) {
-  p {
-    margin: 0 0 35px;
-    line-height: 1.6;
-  }
-}
+// @media (min-width: 767px) {
+//   p {
+//     margin: 0 0 35px;
+//     line-height: 1.6;
+//   }
+// }
 
 a {
   color: #219ab3;
@@ -405,4 +404,8 @@ footer.site-footer {
   padding: 5px;
   box-shadow: #e4e4e4 2px 2px 2px;
   cursor: pointer;
+}
+
+.wrap-whitespace {
+  white-space: normal !important;
 }

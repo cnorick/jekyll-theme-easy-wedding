@@ -1,11 +1,11 @@
 {% for event in site.data.events %}
-  <section class="container content-section {% cycle 'text-left', 'text-right' %}">
-    <div class="row">
-      <div class="col-lg-7 col-lg-offset-{% cycle 2, 3 %} col-sm-offset-2 col-sm-8">
+  <section class="container content-section">
+    <div class="row {% cycle 'justify-content-start', 'justify-content-end' %}">
+      <div class="col-lg-7 col-sm-8">
         <h2>
           {{ event.name }}
           <br>
-          <small>
+          <small class="text-muted wrap-whitespace date-subheader">
             {% if event.date %}
               {{ event.date | date: '%A, %B %e, %Y' }} | {{ event.date | date: '%l:%M %p' }}
             {% else %}
@@ -14,16 +14,20 @@
           </small>
         </h2>
 
-        <div class="row">
-          <address class="col-xs-8 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <address class="col-xs-8 ">
+            {% if event.location_name %}
             <strong>{{ event.location_name }}</strong><br>
+            {% endif %}
+            {% if event.location.google_maps_url %}
             <a href="{{ event.location.google_maps_url }}">
               {{ event.location.address }}<br>
               {{ event.location.city }}, {{ event.location.state }} {{ event.location.zip }}<br>
             </a>
+            {% endif %}
           </address>
 
-          <dl class="col-xs-4 text-right">
+          <dl class="col-xs-4">
             <dt>Attire</dt>
             <dd>{{ event.attire | capitalize }}</dd>
           </dl>
