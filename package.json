@@ -14,7 +14,8 @@
     "build:webpack": "webpack --mode production",
     "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish-gem": "rm jekyll-theme-easy-wedding-*.gem; npm run build && bump patch && gem build jekyll-theme-easy-wedding.gemspec && gem push jekyll-theme-easy-wedding-*.gem"
+    "publish-gem": "rm jekyll-theme-easy-wedding-*.gem; npm run build && bump patch && gem build jekyll-theme-easy-wedding.gemspec && gem push jekyll-theme-easy-wedding-*.gem",
+    "preinstall": "bundle install"
   },
   "repository": {
     "type": "git",
