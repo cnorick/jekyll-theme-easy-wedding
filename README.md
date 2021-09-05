@@ -1,11 +1,7 @@
 # jekyll-theme-easy-wedding
+Are you or a friend getting married? Do you want a quick way to make a **customizable** website? This is the theme for you! When I got married, I created a website to commemorate the occasion as well provide information to my guests. Then, I had a bunch of friends get married, and they wanted me to make them a site too. So, instead of making _basically_ the same site over and over, I decided to templatize it so that I just have to change the data in a yaml file.
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+Most of the original work is from https://github.com/cbaclig/wedding and is thanks to [@cbaclig](https://github.com/cbaclig).
 
 ## Installation
 
@@ -31,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+The best place to start is by copying the [example folder](https://github.com/cnorick/jekyll-theme-easy-wedding/tree/main/example) to your project, then start editing the .yaml files in [\_data](https://github.com/cnorick/jekyll-theme-easy-wedding/tree/main/example/\_data) to customize the site for your needs.
 
 ## Contributing
 
