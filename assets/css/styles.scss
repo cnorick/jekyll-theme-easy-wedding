@@ -4,4 +4,14 @@
 :root {
     --intro-background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%,
              rgba(0,0,0,0.65) 100%),url({{site.data.settings.hero_image}}) no-repeat center center scroll;
+    
+    --intro-background-position: {{site.data.settings.hero_position | default: "center center"}};
+
+    @media (max-width: 767px) {
+        {% if site.data.settings.mobile_hero_image %}
+        --intro-background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0.65) 100%),url({{site.data.settings.mobile_hero_image}}) no-repeat center center scroll;
+        --intro-background-position: {{site.data.settings.mobile_hero_position | default: "center center"}};
+        {% endif %}
+    }
 }

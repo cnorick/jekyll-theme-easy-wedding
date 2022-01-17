@@ -7,7 +7,7 @@
   text-shadow: black 2px 2px 10px;
   background: var(--intro-background);
   background-color: #000000;
-  background-position: center;
+  background-position: var(--intro-background-position);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
