@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run serve:webpack & sleep 3 && npm run serve:jekyll",
     "serve:webpack": "webpack --mode development --watch",
-    "serve:jekyll": "bundle exec jekyll serve -s example --watch",
+    "serve:jekyll": "bundle exec jekyll serve -s example --livereload",
     "build": "npm run build:webpack && npm run build:jekyll",
     "build:webpack": "webpack --mode production",
     "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",

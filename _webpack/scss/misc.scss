@@ -2,10 +2,11 @@ body {
   width: 100%;
   height: 100%;
   font-family: Cardo, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #404040;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 .content-wrapper {
@@ -29,26 +30,8 @@ h6 {
   letter-spacing: 1px;
 }
 
-// p {
-//   margin: 0 0 25px;
-//   font-size: 18px;
-//   line-height: 1.5;
-// }
-
-// ul {
-//   font-size: 18px;
-//   margin: 0 0 25px;
-// }
-
-// @media (min-width: 767px) {
-//   p {
-//     margin: 0 0 35px;
-//     line-height: 1.6;
-//   }
-// }
-
 a {
-  color: #219ab3;
+  color: var(--secondary-color);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -57,52 +40,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #11505d;
-}
-
-.light {
-  font-weight: 400;
-}
-
-
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid #fff;
-  border-radius: 35px;
-  font-size: 40px;
-  color: #fff;
-  background: 0 0;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-  outline: 0;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-}
-
-.btn-circle:hover i.animated {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+  color: var(--secondary-color-darkest)
 }
 
 @-webkit-keyframes pulse {
@@ -148,18 +86,6 @@ a:focus {
   white-space: nowrap;
 }
 
-.download-section {
-  width: 100%;
-  padding: 50px 0;
-  color: #fff;
-  // background: url(img/downloads-bg.jpg) no-repeat center center;
-  background-color: #000000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
 .map {
   width: 100%;
   height: 400px;
@@ -182,24 +108,29 @@ a:focus {
 }
 
 .btn-default {
-  border: 1px solid #219ab3;
-  color: #219ab3;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
   background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #219ab3;
   outline: 0;
-  color: #000000;
-  background-color: #219ab3;
+  color: var(--secondary-text-color);
+  background-color: var(--secondary-color);
 }
 
-body {
-  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-}
+.btn-primary {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color-darker);
 
-/* Author: cbaclig */
+  &:hover {
+    color: var(--primary-text-color-darkest);
+    background-color: var(--primary-color-darkest);
+    border-color: var(--primary-color-darker);
+  }
+}
 
 dd {
   white-space: pre-line;
