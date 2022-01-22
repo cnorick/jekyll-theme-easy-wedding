@@ -7,7 +7,7 @@ hero_position: center center
 
 theme:
   # text_color: '#404040'
-  # primary_color: '#fff'
+  primary_color: '#d98560'
   # secondary_color: '#a2a183'
   # accent_color: '#afa63d'
   # background_color: '#ffff'
@@ -38,6 +38,6 @@ people:
   families_header: Our Families 
   families_text: We would be nothing if it wasn't for the love and support of our wonderful parents and siblings.
   kids_header: Little Ones
-  kids_text: We’re so lucky to have our sweet puppies help us celebrate the big day.
+  kids_text: We're so lucky to have our sweet puppies help us celebrate the big day.
   wedding_party_header: Wedding Party
   

@@ -52,6 +52,7 @@
 
 .navbar-custom .nav li a {
   transition: background 0.5s ease-in-out;
+  font-weight: 600;
 }
 
 .navbar-custom .nav li a:hover,
@@ -59,7 +60,7 @@
 .navbar-custom .nav li a.active {
   outline: 0;
   color: #fff;
-  font-weight: bold;
+  opacity: .6;
 }
 
 .navbar-custom.top-nav-collapse .nav li a:hover,
