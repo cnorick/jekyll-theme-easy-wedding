@@ -296,9 +296,40 @@ dd {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 20px;
+
   .portrait {
     padding: 20px;
+    flex: 1 1 0px;
   }
+}
+
+.polaroid {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
+
+    .img-thumbnail {
+      border: none;
+      object-fit: cover;
+    }
+  
+    img {
+        border-radius: 0.9rem;
+        max-height: 66vh;
+    }
+
+    .caption {
+      h4, h5 {
+        font-size: 1.2em;
+        margin-bottom: 0;
+      }
+    }
 }
 
 .add-to-calendar-checkbox {

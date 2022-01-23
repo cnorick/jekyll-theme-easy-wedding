@@ -1,0 +1,10 @@
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
