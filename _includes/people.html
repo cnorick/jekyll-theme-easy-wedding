@@ -5,7 +5,14 @@
     <div class="people-grid">
       {% for family in site.data.people.families %}
         <div class="protrait polaroid">
-          <img src="{{site.baseurl}}/assets/img/people/{{ family.pic }}" class="img-thumbnail img-responsive" alt="{{ family.name }}" title="{{ family.name }}">
+          <img src="{{site.baseurl}}/assets/img/people/{{ family.pic }}"
+               class="img-thumbnail img-responsive"
+               alt="{{ family.name }}"
+               title="{{ family.name }}"
+               {% if family.position %}
+               style="object-position: {{ family.position }}"
+               {% endif %}
+          >
           <div class="caption">
             <h4>{{ family.name }}</h4>
             <p>{{ family.people }}</p>
@@ -25,7 +32,14 @@
     <div class="people-grid">
       {% for kid in site.data.people.kids %}
         <div class="portrait polaroid">
-          <img src="{{site.baseurl}}/assets/img/people/{{ kid.pic }}" class="img-thumbnail img-responsive" alt="{{ kid.name }}" title="{{ kid.name }}">
+          <img src="{{site.baseurl}}/assets/img/people/{{ kid.pic }}"
+               class="img-thumbnail img-responsive"
+               alt="{{ kid.name }}"
+               title="{{ kid.name }}"
+               {% if her.position %}
+               style="object-position: {{ kid.position }}"
+               {% endif %}
+          >
           <div class="caption">
             <h5>{{ kid.name }}</h5>
               <small>{{ kid.role }}</small>
@@ -47,7 +61,11 @@
 
         <div class="portrait polaroid">
           <img class="img-thumbnail img-responsive" src="{{site.baseurl}}/assets/img/people/{{ her.pic }}" alt="{{ her.name }}"
-            title="{{ her.name }}">
+            title="{{ her.name }}"
+            {% if her.position %}
+            style="object-position: {{ her.position }}"
+            {% endif %}
+          >
           <div class="caption">
             <h5>{{ her.name }}</h5>
             <small>{{ her.role }}</small>
@@ -56,7 +74,11 @@
 
         <div class="portrait polaroid">
           <img class="img-thumbnail img-responsive" src="{{site.baseurl}}/assets/img/people/{{ his.pic }}" alt="{{ his.name }}"
-            title="{{ his.name }}">
+            title="{{ his.name }}"
+            {% if his.position %}
+            style="object-position: {{ his.position }}"
+            {% endif %}
+          >
           <div class="caption">
             <h5>{{ his.name }}</h5>
             <small>{{ his.role }}</small>

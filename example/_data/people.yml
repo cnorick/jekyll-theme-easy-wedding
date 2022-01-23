@@ -12,6 +12,7 @@ kids:
   - pic: oliver.png
     name: Oliver
     role: Ring Bearer
+    position: top
 her_side:
   - name: Victoria Cordina
     pic: vicky.jpg
