@@ -30,8 +30,11 @@ $secondary-color-darkest: scale-color({{site.data.settings.theme.secondary_color
 $secondary-text-color-darkest: text-clr($secondary-color-darkest);
 
 $accent-color: {{site.data.settings.theme.accent_color | default: "#219ab3"}};
+$accent-text-color: text-clr($accent-color);
 $accent-color-darker: scale-color({{site.data.settings.theme.accent_color | default: "#fff"}}, $lightness: -10%);
+$accent-text-color-darker: text-clr($accent-color-darker);
 $accent-color-darkest: scale-color({{site.data.settings.theme.accent_color | default: "#fff"}}, $lightness: -30%);
+$accent-text-color-darkest: text-clr($accent-color-darkest);
 
 $background-color: {{site.data.settings.theme.background_color | default: "#fff"}};
 $background-color-lighter: scale-color({{site.data.settings.theme.background_color | default: "#fff"}}, $lightness: 50%);
@@ -70,6 +73,9 @@ $background-color-lighter: scale-color({{site.data.settings.theme.background_col
     --accent-color: #{$accent-color};
     --accent-color-darker: #{$accent-color-darker};
     --accent-color-darkest: #{$accent-color-darkest};
+    --accent-text-color: #{$accent-text-color};
+    --accent-text-color-darker: #{$accent-text-color-darker};
+    --accent-text-color-darkest: #{$accent-text-color-darkest};
 
     --background-color: #{$background-color};
     --background-color-lighter: #{$background-color-lighter};

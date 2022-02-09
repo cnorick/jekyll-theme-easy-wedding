@@ -26,6 +26,10 @@
             top: 0;
             right: 0;
             padding: 10px;
+
+            button.btn-close {
+                color: var(--accent-text-color);
+            }
         }
 
         &.hidden {
