@@ -14,5 +14,7 @@
   link: /registry
 - name: Photos
   link: /photo-gallery
+- name: Livestream
+  link: /livestream
 - name: RSVP
   modal_id: rsvp-modal
