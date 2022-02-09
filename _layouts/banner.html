@@ -1,22 +1,36 @@
-<div class="banner" id="{{page.id}}-banner">
-    <div class="close-button">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+{% if page.hide != true %}
+    <div class="banner" id="{{page.id}}-banner">
+        <div class="close-button">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="banner-content">
+            {{content}}
+        </div>
     </div>
-    <div class="banner-content">
-        {{content}}
-    </div>
-</div>
 
-<script>
-    (function(){
-        const banner = document.getElementById('{{page.id}}-banner');
-        // hide banner when close button is clicked.
-        banner.querySelector('.btn-close').addEventListener('click', function(){
-            banner.classList.add('hidden');
-            setTimeout(() => 
-                banner.classList.add('closed'),
-                1000
-            );
-        });
-    })();
-</script>
+    <script>
+        (function(){
+            const banner = document.getElementById('{{page.id}}-banner');
+            // hide banner when close button is clicked.
+            banner.querySelector('.btn-close').addEventListener('click', function(){
+                banner.classList.add('hidden');
+                setTimeout(() =>
+                    banner.classList.add('closed'),
+                    1000
+                );
+            });
+
+            // hide banner if it's not time to show it.
+            {% if page.start_time or page.end_time %}
+                const startTime = new Date('{{page.start_time | default: "1970-01-01"}}');
+                const endTime = new Date('{{page.end_time | default: "2099-12-31"}}');
+                console.log(startTime);
+                console.log(endTime);
+                const now = new Date();
+                if (now < startTime || now > endTime) {
+                    banner.classList.add('hidden');
+                }
+            {% endif %}
+        })();
+    </script>
+{% endif %}
