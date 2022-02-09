@@ -1,0 +1,22 @@
+<div class="banner" id="{{page.id}}-banner">
+    <div class="close-button">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="banner-content">
+        {{content}}
+    </div>
+</div>
+
+<script>
+    (function(){
+        const banner = document.getElementById('{{page.id}}-banner');
+        // hide banner when close button is clicked.
+        banner.querySelector('.btn-close').addEventListener('click', function(){
+            banner.classList.add('hidden');
+            setTimeout(() => 
+                banner.classList.add('closed'),
+                1000
+            );
+        });
+    })();
+</script>

@@ -9,6 +9,7 @@ baseurl: ""
 collections:
   stories:
     sort_by: order
+  banners:
 
 sass:
   style: compressed
@@ -18,6 +19,10 @@ defaults:
       path: "photos/"
     values:
       image: true
+  - scope:
+      type: banners
+    values:
+      layout: banner
 
 # Build settings
 markdown: kramdown
