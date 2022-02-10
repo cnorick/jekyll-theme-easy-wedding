@@ -9,12 +9,15 @@
     z-index: 999;
 
     .banner {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: stretch;
         background-color: var(--accent-color);
         margin-top: 20px;
-        padding: 20px;
         color: var(--accent-text-color);
         border-radius: 10px;
+        min-height: 80px;
 
         a {
             color: var(--accent-text-color);
@@ -22,7 +25,6 @@
         }
 
         .close-button {
-            position: absolute;
             top: 0;
             right: 0;
             padding: 10px;
@@ -39,6 +41,16 @@
 
         &.closed {
             display: none;
+        }
+
+        .banner-content {
+            margin: 10px 0 10px 20px;
+            display: flex;
+            align-items: center;
+
+            p {
+                margin: 0;
+            }
         }
     }
 }
