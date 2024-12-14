@@ -7,9 +7,14 @@
                     <h1 class="brand-heading">{{ site.data.couple.spouse1.short_name }} & {{ site.data.couple.spouse2.short_name }}</h1>
                     <p class="intro-text">
                         {% assign main_event = site.data.events | where: "main_event", true | first %}
-                        {{ main_event.date | date: '%B %d, %Y' }}
+                        {% if main_event.date %}
+                            {{ main_event.date | date: '%B %d, %Y' }}
+                        {% else %}
+                            {{ main_event.date_alt }}
+                        {% endif %}
                         <br>
-                        {{ main_event.location.city }}, {{ main_event.location.long_state }}
+                        {{ main_event.location.city }}{% if main_event.date %}, {{ main_event.location.long_state }}{% endif %}
+
                       <br>
                     </p>
                 </div>
