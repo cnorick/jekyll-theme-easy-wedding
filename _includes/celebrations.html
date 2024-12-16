@@ -32,10 +32,12 @@
             {% endif %}
           </address>
 
+          {% if event.attire %}
           <dl class="col-xs-4">
             <dt>Attire</dt>
             <dd>{{ event.attire | capitalize }}</dd>
           </dl>
+          {% endif %}
 
         </div>
 
